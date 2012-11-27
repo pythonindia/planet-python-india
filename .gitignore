@@ -1,2 +1,8 @@
 *~
 *.tmplc
+output/*.html
+output/*.xml
+bin/
+lib/
+cache/
+include/
