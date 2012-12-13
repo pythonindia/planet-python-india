@@ -24,10 +24,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="generator" content="<TMPL_VAR generator ESCAPE="HTML">">
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+<style type="text/css">
+    .footer {
+        padding: 20px 0px;
+        text-align: center;
+        border-top: 1px solid #E5E5E5;
+        background-color: whiteSmoke;
+    }
+
+    .subscriptions ul {
+        padding-left: 20px;
+    }
+</style>
 </head>
 
 <body>
+<!--
 <h1><TMPL_VAR name></h1>
+-->
 
 ### One of the two loops available is the Channels loop.  This allows you
 ### to easily create a list of subscriptions, which is exactly what we'll do
@@ -40,9 +54,36 @@
 
 ### The other loop is the Items loop, which will get iterated for each
 ### news item.
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span10">
+<header class="header">
+    <div class="container">
+        <h1><a href="#">Python India</a></h1>
+
+        <div class="navbar">
+          <div class="navbar-inner">
+            <ul class="nav nav-pills">
+              <!--
+              <li><a href="#">Home</a></li>
+              <li class="divider-vertical"></li>
+              -->
+              <li><a href="/blog">Blog</a></li>
+              <li class="divider-vertical"></li>
+              <li class="active"><a href="/planet">Planet</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="/wiki">Wiki</a></li>
+
+              <!--
+              <li class="divider-vertical"></li>
+              <li><a href="#society">Society</a></li>
+              -->
+            </ul>
+          </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="span9">
             <TMPL_LOOP Items>
 
             ### Visually distinguish articles from different days by checking for
@@ -73,9 +114,9 @@
             </p>
             </TMPL_LOOP>
         </div>
-        <div class="span2">
-            <h2>Subscriptions</h2>
-            <ul>
+        <div class="span3 subscriptions">
+            <h3>Subscriptions</h3>
+            <ul class="unstyled">
             <TMPL_LOOP Channels>
             <li><a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a> <a href="<TMPL_VAR url ESCAPE="HTML">">(feed)</a></li>
             </TMPL_LOOP>
@@ -83,11 +124,13 @@
         </div>
     </div>
 </div>
-<hr>
-<p>
-<a href="http://www.planetplanet.org/">Powered by Planet!</a><br>
-<em>Last updated: <TMPL_VAR date></em>
-</p>
+
+<footer class="footer">
+    <div class="container">
+        <a href="http://www.planetplanet.org/">Powered by Planet!</a><br>
+        <em>Last updated: <TMPL_VAR date></em>
+    </div>
+</footer>
 </body>
 
 </html>
