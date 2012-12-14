@@ -25,6 +25,10 @@
 <meta name="generator" content="<TMPL_VAR generator ESCAPE="HTML">">
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
 <style type="text/css">
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+
     .footer {
         padding: 20px 0px;
         text-align: center;
@@ -43,6 +47,28 @@
 <h1><TMPL_VAR name></h1>
 -->
 
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">Python India</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/wiki">Wiki</a></li>
+          <li class="active"><a href="/planet">Planet</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+
 ### One of the two loops available is the Channels loop.  This allows you
 ### to easily create a list of subscriptions, which is exactly what we'll do
 ### here.
@@ -56,28 +82,7 @@
 ### news item.
 <header class="header">
     <div class="container">
-        <h1><a href="#">Python India</a></h1>
-
-        <div class="navbar">
-          <div class="navbar-inner">
-            <ul class="nav nav-pills">
-              <!--
-              <li><a href="#">Home</a></li>
-              <li class="divider-vertical"></li>
-              -->
-              <li><a href="/blog">Blog</a></li>
-              <li class="divider-vertical"></li>
-              <li class="active"><a href="/planet">Planet</a></li>
-              <li class="divider-vertical"></li>
-              <li><a href="/wiki">Wiki</a></li>
-
-              <!--
-              <li class="divider-vertical"></li>
-              <li><a href="#society">Society</a></li>
-              -->
-            </ul>
-          </div>
-        </div>
+        <h1><a href="#">Planet Python India</a></h1>
     </div>
 </header>
 
