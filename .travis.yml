@@ -1,0 +1,8 @@
+language: python
+python:
+  - '2.7'
+script: ./deploy
+env:
+ global:
+   - GH_REF: github.com/pythonindia/planet-python-india
+   - secure: CzIjcrZi/0ohN/NAfOdetD+2i0eCLYb4b9VUU4tRTBYFaHuyjcu+7uwuHI0Wv+m9OpoKCqVwnIrmBM/j6/e3XyWlyFk4AEbhz7gyKJsfozYKJu/11Onrtz4kbCt0iCuqCYAm5/mNrGxO9oEczf5i6f+Fzz07jhj+3ej4qbc486U=
