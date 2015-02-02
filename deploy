@@ -3,7 +3,7 @@
 rm -rf build/* || exit 0;
 mkdir build;
 pip install -U mynt==0.2.3
-mynt gen -f . build
+make
 ( cd build
   git init
   git config user.name "Travis-CI"
