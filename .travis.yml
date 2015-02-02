@@ -2,6 +2,9 @@ language: python
 python:
   - '2.6'
 script: ./deploy
+before_install:
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq libdb-dev
 env:
  global:
    - GH_REF: github.com/pythonindia/planet-python-india
