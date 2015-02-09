@@ -9,8 +9,11 @@ before_install:
  - cd Python-2.7.9
  - ./configure
  - make
+ - sudo make install
  - ./python -c "import bsddb;print 'worked'"
- - ..
+ - cd ..
+ - virtualenv -p /usr/local/bin/python2.7 venv
+ - . venv/bin/activate
 env:
  global:
    - GH_REF: github.com/pythonindia/planet-python-india
