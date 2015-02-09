@@ -6,11 +6,11 @@ before_install:
  - sudo apt-get update -y
  - sudo apt-get install -y libdb-dev
  - wget -qO- https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz | tar xvz
- - push Python-2.7.9
+ - cd Python-2.7.9
  - ./configure
  - make
  - ./python -c "import bsddb;print 'worked'"
- - pop
+ - ..
 env:
  global:
    - GH_REF: github.com/pythonindia/planet-python-india
