@@ -7,9 +7,9 @@ before_install:
  - sudo apt-get install -y libdb-dev
  - wget -qO- https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz | tar xvz
  - cd Python-2.7.9
- - ./configure
- - make
- - sudo make install
+ - ./configure > install.log 2>&1
+ - make > install.log 2>&1
+ - sudo make install > install.log 2>&1
  - ./python -c "import bsddb;print 'worked'"
  - cd ..
  - virtualenv -p /usr/local/bin/python2.7 venv
